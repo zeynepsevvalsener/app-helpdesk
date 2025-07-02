@@ -17,9 +17,6 @@ jobs:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
 
-      - name: Debug: List workspace files
-        run: ls -lR ${{ github.workspace }}
-
       - name: Python Kurulumu
         uses: actions/setup-python@v4
         with:
@@ -47,9 +44,6 @@ jobs:
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
-
-      - name: Debug: List workspace files
-        run: ls -lR ${{ github.workspace }}
 
       - name: Node Kurulumu
         uses: actions/setup-node@v3

@@ -1,0 +1,183 @@
+# =========================
+# Operating System
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# =========================
+# IDE / Editor
+# =========================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm / PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Python (backend)
+# =========================
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual envs
+venv/
+ENV/
+env/
+.venv/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+
+# FastAPI/Starlette instance folder
+instance/
+
+# SQLite DBs
+*.db
+*.sqlite3
+helpdesk.db
+
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Build outputs
+dist/
+build/
+.out/
+.cache/
+.eslintcache
+
+# =========================
+# Environment & Secrets
+# =========================
+# dotenv files
+*.env
+*.env.*
+!example.env
+
+# AWS keys
+.aws/
+credentials
+config
+
+# GCP Service Accounts
+*.json
+!*.template.json
+
+# Azure
+*.azure*
+azureauth
+
+# SSH keys and TLS certs
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.jks
+
+# Kubernetes
+.kube/
+kubeconfig
+kubeconfig.*
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Ansible
+*.retry
+group_vars/
+host_vars/
+
+# Vaults / Keyrings
+.vault/
+keyring-journal.*
+*.gpg
+
+# Git credentials
+.git-credentials
+.netrc
+
+# =========================
+# Docker
+# =========================
+# Compose overrides
+docker-compose.override.yml
+docker-compose.*.yml
+docker-compose.*.yaml
+
+# Docker Desktop
+.docker/
+docker-sync.yml
+
+# =========================
+# Logs & Temp
+# =========================
+*.log
+logs/
+*.tmp
+*.temp
+tmp/
+
+# =========================
+# Miscellaneous
+# =========================
+*.bak
+*.swp
+*.swo
+*.old
+*.orig
+*.restore
+*.rej
+*.cache

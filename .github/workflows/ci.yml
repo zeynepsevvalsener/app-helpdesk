@@ -1,0 +1,64 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend:
+    name: Backend (FastAPI)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - name: Kodu Checkout Et
+        uses: actions/checkout@v3
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Bağımlılıkları Yükle
+        run: pip install -r requirements.txt
+
+      - name: Kod Kalitesi (flake8)
+        run: |
+          pip install flake8
+          flake8 app/ --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      # - name: Backend Testleri (pytest)
+      #   run: |
+      #     pip install pytest
+      #     pytest
+
+  frontend:
+    name: Frontend (React)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - name: Kodu Checkout Et
+        uses: actions/checkout@v3
+
+      - name: Node Kurulumu
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Bağımlılıkları Yükle
+        run: npm install
+
+      - name: Kod Kalitesi (ESLint)
+        run: npm run lint || true
+
+      - name: Frontend Build
+        run: npm run build
+
+# Notlar:
+# - Backend testleri için pytest adımını aktif edebilirsiniz.
+# - Gerekirse coverage, docker build, deploy adımları eklenebilir.

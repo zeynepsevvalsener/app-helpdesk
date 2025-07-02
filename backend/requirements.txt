@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+celery
+redis
+python-dotenv          # .env okumak için

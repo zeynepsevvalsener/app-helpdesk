@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
-        with:
-          path: .
 
       - name: Debug: List workspace files
         run: ls -lR ${{ github.workspace }}
@@ -49,8 +47,6 @@ jobs:
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
-        with:
-          path: .
 
       - name: Debug: List workspace files
         run: ls -lR ${{ github.workspace }}

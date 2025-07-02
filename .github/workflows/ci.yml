@@ -63,6 +63,9 @@ jobs:
       - name: Frontend Build
         run: npm run build
 
+      - name: Debug: List workspace files
+        run: ls -lR ${{ github.workspace }}
+
 # Notlar:
 # - Backend testleri için pytest adımını aktif edebilirsiniz.
 # - Gerekirse coverage, docker build, deploy adımları eklenebilir.

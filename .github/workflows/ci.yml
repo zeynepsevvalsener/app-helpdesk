@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
+        with:
+          path: .
 
       - name: Python Kurulumu
         uses: actions/setup-python@v4
@@ -44,6 +46,8 @@ jobs:
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3
+        with:
+          path: .
 
       - name: Node Kurulumu
         uses: actions/setup-node@v3

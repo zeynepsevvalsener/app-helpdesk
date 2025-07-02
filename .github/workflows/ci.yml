@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ../app-helpdesk/frontend
     steps:
       - name: Kodu Checkout Et
         uses: actions/checkout@v3

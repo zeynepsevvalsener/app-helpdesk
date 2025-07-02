@@ -19,6 +19,9 @@ jobs:
         with:
           path: .
 
+      - name: Debug: List workspace files
+        run: ls -lR ${{ github.workspace }}
+
       - name: Python Kurulumu
         uses: actions/setup-python@v4
         with:
@@ -49,6 +52,9 @@ jobs:
         with:
           path: .
 
+      - name: Debug: List workspace files
+        run: ls -lR ${{ github.workspace }}
+
       - name: Node Kurulumu
         uses: actions/setup-node@v3
         with:
@@ -62,9 +68,6 @@ jobs:
 
       - name: Frontend Build
         run: npm run build
-
-      - name: Debug: List workspace files
-        run: ls -lR ${{ github.workspace }}
 
 # Notlar:
 # - Backend testleri için pytest adımını aktif edebilirsiniz.
